@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Test Case Daily Report</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Submit Daily Test Case Report</h1>
+        <form action="/submit" method="POST" class="mt-4">
+            <div class="form-group">
+                <label for="emp_id">Tester Emp ID:</label>
+                <input type="text" class="form-control" id="emp_id" name="emp_id" required>
+            </div>
+            <div class="form-group">
+                <label for="pending">Pending:</label>
+                <input type="number" class="form-control" id="pending" name="pending" required>
+            </div>
+            <div class="form-group">
+                <label for="in_progress">In Progress:</label>
+                <input type="number" class="form-control" id="in_progress" name="in_progress" required>
+            </div>
+            <div class="form-group">
+                <label for="completed">Completed:</label>
+                <input type="number" class="form-control" id="completed" name="completed" required>
+            </div>
+            <div class="form-group">
+                <label for="blocked">Blocked:</label>
+                <input type="number" class="form-control" id="blocked" name="blocked" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Report</button>
+        </form>
+        <a href="/reports" class="btn btn-link">View Reports</a>
+    </div>
+</body>
+</html>
